@@ -1,0 +1,18 @@
+{
+  "name": "ts_compiler_api_codegen_blogpost",
+  "version": "1.0.0",
+  "description": "Scratchpad code for a blog post",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nate Anderson",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.3.3",
+    "@types/xml2js": "^0.4.9",
+    "soap": "^0.40.0",
+    "typescript": "^4.3.5",
+    "xml2js": "^0.4.23"
+  }
+}

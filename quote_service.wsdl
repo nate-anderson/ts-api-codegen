@@ -1,0 +1,35 @@
+<definitions
+    name="StockQuoteService"
+    targetNamespace="http://www.example.com/wsdl/StockQuoteService.wsdl"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap = "http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:qs = "http://www.example.com/wsdl/StockQuoteService.wsdl"
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+>
+    <message name="FetchQuoteRequest">
+        <part name="tickerSymbol" type="xsd:string"/>
+        <part name="dateRangeStart" type="xsd:dateTime"/>
+        <!-- Optional date range end, defaults to current date-->
+        <part name="dateRangeEnd" type="xsd:dateTime" minOccurs="0"/>
+    </message>
+
+    <message name="Quote">
+        <part name="tickerSymbol" type="xsd:string"/>
+        <part name="current" type="xsd:int"/>
+        <part name="dateRangeHigh" type="xsd:int"/>
+        <part name="dateRangeLow" type="xsd:int"/>
+        <part name="dateRangeDelta" type="xsd:string"/>
+        <part name="volume" type="xsd:int"/>
+    </message>
+
+    <portType name="FetchQuotePortType">
+        <operation name="FetchQuote">
+            <input message="qs:FetchQuoteRequest"/>
+            <output message="qs:Quote"/>
+        </operation>
+    </portType>
+
+    <binding>
+        
+    </binding>
+</definitions>
